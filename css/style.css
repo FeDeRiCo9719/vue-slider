@@ -1,0 +1,91 @@
+/*---------------------- RESET ----------------------*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*---------------------- COMMON ----------------------*/
+body {
+    font-family: Verdana;
+    background-color: rgb(52, 54, 61);
+}
+
+/*---------------------- HEADER ----------------------*/
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(52, 54, 61);
+}
+nav {
+    height: 100%;
+    /* background-color: rgb(107, 138, 49); */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav ul {
+    list-style: none;
+    height: 100%;
+    /* background-color: rgb(202, 212, 184); */
+
+    display: flex;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 25px;
+    color: white;
+    font-family: Arial;
+    position: relative;
+    transition: 0.2s;
+}
+nav a::after {
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 2px;
+    background-color: gold;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+nav a:hover::after {
+    width: 100%;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: gold;
+    transition: 0.2s;
+}
+.logo {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+
+/*---------------------- MAIN ----------------------*/
+.container {
+    width: 100%;
+    background-color: rgb(255, 250, 180);
+    height: 600px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container i {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.582);
+    transition: 0.2s;
+}
+.container i:hover {
+    color: rgb(156, 156, 156);
+    cursor: pointer;
+    transition: 0.2s;
+}
