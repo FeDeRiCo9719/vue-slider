@@ -16,11 +16,13 @@ var app = new Vue({
 
         Images: [
             'https://www.1zoom.me/prev/303/302250.jpg',
+            'https://s1.1zoom.me/prev/591/Sunrises_and_sunsets_Men_Sea_Surfing_Windsurfing_590129_600x400.jpg',
             'https://s1.1zoom.me/prev/576/Owls_Eurasian_eagle-owl_Closeup_575589_600x400.jpg',
+            'https://www.ducatimilano.it/wp-content/uploads/2019/10/DUCATI_PANIGALE-V2_AMBIENCE_28_UC101517_High-600x400.jpg',
             'https://aiglebleu.net/wp-content/uploads/2016/03/ecologie-ecology-gu%C3%A9rison-healing-earth-wisdom-sagesse-de-la-terre-beaute-beauty.jpg'
         ],
         // index della singola immagine salvato in una variabile
-        ImageIndex: 0
+        ImageIndex: 1
     },
 
     // funzioni per incrementare e decrementare l'indice 
@@ -41,11 +43,15 @@ var app = new Vue({
             }
         },
 
-        colorCircle: function(indexCicle ) {
+        colorCircle: function(indexCicle) {
             if ( this.ImageIndex == indexCicle ) {
-                return 'cicle_color';
+                return 'cicle_color'; // se gli index coincidono aggiungi la classe che colora il cerchietto
             }
-            return '';
+            return ''; // altrimenti non aggiungi nulla
+        },
+
+        switchImg: function(indexCicle) {
+            this.ImageIndex = indexCicle;
         }
     },
 });

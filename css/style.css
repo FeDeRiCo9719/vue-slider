@@ -105,12 +105,20 @@ nav a:hover {
     margin-top: 30px;
 }
 .fa-dot-circle {
-    margin: 0px 10px;
+    margin: 0px 7px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.582);
+    cursor: pointer;
+}
+.fa-dot-circle:hover {
+    color: rgb(156, 156, 156);
 }
 .cicle_color {
     color: rgb(0, 204, 255);
-    transform: scale(1.5) perspective(1px);
+    transform: scale(1.7) perspective(1px);
+}
+.cicle_color:hover {
+    color: rgb(0, 204, 255);
 }
 /*------ images ------*/
 .images {

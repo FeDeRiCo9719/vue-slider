@@ -56,7 +56,8 @@
                 <div class='Images_box'>
                     <img class='images' :src="Images[ImageIndex]" alt="">
                     <div class="circles">
-                        <i class="fas fa-dot-circle" v-for='(item, index) in Images' :class="colorCircle(index)"></i>
+                        <i class="fas fa-dot-circle" v-for='(item, index) in Images' 
+                        :class="colorCircle(index)" @click='switchImg(index)'></i>
                     </div>
                 </div>
                 <!-- right arrow -->
