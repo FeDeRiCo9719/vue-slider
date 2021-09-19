@@ -15,24 +15,31 @@ var app = new Vue({
     data: {
 
         Images: [
-            'https://www.coopalleanza3-0.it/dam/relation/images/placeholder/placeholder-content1-500x300.png',
-            'https://ftl-media.imgix.net/media/truck/flat-bed/114sd-blue-500x300.jpg',
-            'https://www.fromoldbooks.org/Bell-BritishLocomotivesIllustrated/24-Re-constructed-Atlantic-type-Locomotive-q75-500x300.jpg'
+            'https://upload.wikimedia.org/wikipedia/commons/5/59/500_x_300_Ramosmania_rodriguesii_%28Rubiaceae%29.jpg',
+            'https://media.tdc.travel/tdc_media/tmp/new/1569358007.500.Distinction-SOUTH-title-500x300-v2.jpg',
+            'https://i.guim.co.uk/img/media/f1c805f02b98e92359aaf7436f175326fbbdedd7/0_0_5400_3238/500.jpg?quality=85&auto=format&fit=max&s=c8315df8131190f83e1c22ec3122e3fc'
         ],
         // index della singola immagine salvato in una variabile
         ImageIndex: 0
     },
 
+    // funzioni per incrementare e decrementare l'indice 
     methods: {
         next: function() {
-
-            this.ImageIndex++
+            this.ImageIndex++;
+            
+            if ( this.ImageIndex >= this.Images.length ) {
+                this.ImageIndex = 0;
+            }
         },
 
         back: function() {
 
-            this.ImageIndex--
+            this.ImageIndex--;
+
+            if ( this.ImageIndex < 0 ) {
+                this.ImageIndex = (this.Images.length - 1);
+            }
         }
     },
 });
-
