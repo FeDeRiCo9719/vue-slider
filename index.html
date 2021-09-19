@@ -49,13 +49,13 @@
         <main>
             <div class="container">
                 <div class='L_arrow'>
-                    <i class="fas fa-chevron-circle-left"></i>
+                    <i @click='back' class="fas fa-chevron-circle-left"></i>
                 </div>
                 <div class='images'>
                     <img :src="Images[ImageIndex]" alt="">
                 </div>
                 <div class='R_arrow'>
-                    <i class="fas fa-chevron-circle-right"></i>
+                    <i @click='next' class="fas fa-chevron-circle-right"></i>
                 </div>
             </div>
         </main>
