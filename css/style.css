@@ -47,7 +47,8 @@ nav a::after {
     width: 0;
     position: absolute;
     height: 2px;
-    background-color: gold;
+    /* background-color: gold; */
+    background-color: rgb(0, 204, 255);
     left: 0;
     bottom: -8px;
     transition: 0.3s;
@@ -57,7 +58,8 @@ nav a:hover::after {
     transition: 0.3s;
 }
 nav a:hover {
-    color: gold;
+    /* color: gold; */
+    color: rgb(0, 204, 255);
     transition: 0.2s;
 }
 .logo {
@@ -75,16 +77,43 @@ nav a:hover {
     height: 600px;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
-.container i {
+/*------ arrow ------*/
+.L_arrow, .R_arrow {
+    margin: 0px 100px;
+}
+.arrow {
     font-size: 50px;
     color: rgba(0, 0, 0, 0.582);
-    transition: 0.2s;
+    transition: 0.1s;
 }
-.container i:hover {
+.arrow:hover {
     color: rgb(156, 156, 156);
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
+}
+.arrow:active {
+    color: rgb(94, 94, 94);
+}
+/*------ circles ------*/
+.circles {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+.fa-dot-circle {
+    margin: 0px 10px;
+    color: rgba(0, 0, 0, 0.582);
+}
+.cicle_color {
+    color: rgb(0, 204, 255);
+    transform: scale(1.5) perspective(1px);
+}
+/*------ images ------*/
+.images {
+    border: 5px solid white;
+    box-shadow: 2px 2px 20px 12px rgba(0, 0, 0, 0.288);
 }

@@ -50,15 +50,18 @@
             <div class="container">
                 <!-- left arrow -->
                 <div class='L_arrow'>
-                    <i @click='back' class="fas fa-chevron-circle-left"></i>
+                    <i @click='back' class="fas fa-chevron-circle-left arrow"></i>
                 </div>
                 <!-- images -->
-                <div class='images'>
-                    <img :src="Images[ImageIndex]" alt="">
+                <div class='Images_box'>
+                    <img class='images' :src="Images[ImageIndex]" alt="">
+                    <div class="circles">
+                        <i class="fas fa-dot-circle" v-for='(item, index) in Images' :class="colorCircle(index)"></i>
+                    </div>
                 </div>
                 <!-- right arrow -->
                 <div class='R_arrow'>
-                    <i @click='next' class="fas fa-chevron-circle-right"></i>
+                    <i @click='next' class="fas fa-chevron-circle-right arrow"></i>
                 </div>
             </div>
         </main>

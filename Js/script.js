@@ -15,9 +15,9 @@ var app = new Vue({
     data: {
 
         Images: [
-            'https://upload.wikimedia.org/wikipedia/commons/5/59/500_x_300_Ramosmania_rodriguesii_%28Rubiaceae%29.jpg',
-            'https://media.tdc.travel/tdc_media/tmp/new/1569358007.500.Distinction-SOUTH-title-500x300-v2.jpg',
-            'https://i.guim.co.uk/img/media/f1c805f02b98e92359aaf7436f175326fbbdedd7/0_0_5400_3238/500.jpg?quality=85&auto=format&fit=max&s=c8315df8131190f83e1c22ec3122e3fc'
+            'https://www.1zoom.me/prev/303/302250.jpg',
+            'https://s1.1zoom.me/prev/576/Owls_Eurasian_eagle-owl_Closeup_575589_600x400.jpg',
+            'https://aiglebleu.net/wp-content/uploads/2016/03/ecologie-ecology-gu%C3%A9rison-healing-earth-wisdom-sagesse-de-la-terre-beaute-beauty.jpg'
         ],
         // index della singola immagine salvato in una variabile
         ImageIndex: 0
@@ -34,12 +34,18 @@ var app = new Vue({
         },
 
         back: function() {
-
             this.ImageIndex--;
 
             if ( this.ImageIndex < 0 ) {
                 this.ImageIndex = (this.Images.length - 1);
             }
+        },
+
+        colorCircle: function(indexCicle ) {
+            if ( this.ImageIndex == indexCicle ) {
+                return 'cicle_color';
+            }
+            return '';
         }
     },
 });
