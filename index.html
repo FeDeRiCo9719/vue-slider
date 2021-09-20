@@ -53,7 +53,7 @@
                     <i @click='back' class="fas fa-chevron-circle-left arrow"></i>
                 </div>
                 <!-- images -->
-                <div class='Images_box'>
+                <div class='Images_box' @mouseover='stop'>
                     <img class='images' :src="Images[ImageIndex]" alt="">
                     <div class="circles">
                         <i class="fas fa-dot-circle" v-for='(item, index) in Images' 

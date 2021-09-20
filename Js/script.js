@@ -22,7 +22,8 @@ var app = new Vue({
             'https://aiglebleu.net/wp-content/uploads/2016/03/ecologie-ecology-gu%C3%A9rison-healing-earth-wisdom-sagesse-de-la-terre-beaute-beauty.jpg'
         ],
         // index della singola immagine salvato in una variabile
-        ImageIndex: 1
+        ImageIndex: 0,
+        autoplay: null
     },
 
     // funzioni per incrementare e decrementare l'indice 
@@ -52,6 +53,15 @@ var app = new Vue({
 
         switchImg: function(indexCicle) {
             this.ImageIndex = indexCicle;
+        },
+
+        stop: function() {
+            clearInterval(this.autoplay);
         }
     },
+
+    // bonus - autoplay slider
+    mounted: function() {
+        this.autoplay = setInterval(this.next, 2000);
+    }
 });
